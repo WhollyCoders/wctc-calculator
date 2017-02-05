@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Calculator</title>
+    <style media="screen">
+      .wrapper{width: 230px; background-color: #3e2c06; padding: 12px; border-radius: 20px;}
+      .calculator-output{border: 1px solid #ccc; background-color: #fff; width: 222px; height: 55px; margin: 2px;}
+      .row-left{float: left;}
+      #btn-enter{margin-left: 6px; background-color: #d2d3d7; word-wrap: break-word;}
+      #btn-clear{margin-left: 4px; background-color: beige; text-align: center; padding: 0px; font-size: 150%;}
+      #btn-zero{margin-right:3px;}
+      .btn{font-size: 200%;}
+      .btn-one{width: 50px; height: 50px; margin: 2px;}
+      .btn-two{width: 50px; height: 158px; margin: 2px;}
+      .btn-three{width: 167px; height: 50px; margin: 2px;}
+
+      .operation-btn{background-color: #ea9038; color: #fff;}
+      .number-btn{background-color: #67686a; color: #fff;}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="calculator">
+          <div class="row">
+            <div id="output-area" class="calculator-output">
+
+            </div>
+          </div>
+          <div class="row">
+            <button class="btn btn-one operation-btn" type="button" name="add">+</button>
+            <button class="btn btn-one operation-btn" type="button" name="subtract">-</button>
+            <button class="btn btn-one operation-btn" type="button" name="multiply">x</button>
+            <button class="btn btn-one operation-btn" type="button" name="divide">/</button>
+          </div>
+          <div class="row">
+            <div class="row-left">
+              <button class="btn btn-one number-btn" type="button" name="seven">7</button>
+              <button class="btn btn-one number-btn" type="button" name="eight">8</button>
+              <button class="btn btn-one number-btn" type="button" name="nine">9</button><br>
+              <button class="btn btn-one number-btn" type="button" name="divide">4</button>
+              <button class="btn btn-one number-btn" type="button" name="add">5</button>
+              <button class="btn btn-one number-btn" type="button" name="subtract">6</button><br>
+              <button class="btn btn-one number-btn" type="button" name="one">1</button>
+              <button class="btn btn-one number-btn" type="button" name="two">2</button>
+              <button class="btn btn-one number-btn" type="button" name="three">3</button>
+            </div>
+            <div class="row-right">
+              <button id="btn-enter" class="toptobottom btn btn-two" type="button" name="enter">=</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="row-left">
+              <button id="btn-zero" class="btn btn-three number-btn" type="button" name="zero">0</button>
+            </div>
+            <div class="row-right">
+              <button id="btn-clear" class="btn btn-one" type="button" name="clear">AC</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
