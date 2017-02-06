@@ -5,7 +5,7 @@
     <title>Calculator</title>
     <style media="screen">
       .wrapper{width: 230px; background-color: #3e2c06; padding: 12px; border-radius: 20px;}
-      .calculator-output{border: 1px solid #ccc; background-color: #fff; width: 222px; height: 55px; margin: 2px;}
+      .calculator-output{border: 1px solid #ccc; background-color: #333; width: 222px; height: 55px; margin: 2px;}
       .row-left{float: left;}
       #btn-enter{margin-left: 6px; background-color: #d2d3d7; word-wrap: break-word;}
       #btn-clear{margin-left: 4px; background-color: beige; text-align: center; padding: 0px; font-size: 150%;}
@@ -29,22 +29,22 @@
             </div>
           </div>
           <div class="row">
-            <button class="btn btn-one operation-btn" type="button" name="add">+</button>
-            <button class="btn btn-one operation-btn" type="button" name="subtract">-</button>
-            <button class="btn btn-one operation-btn" type="button" name="multiply">x</button>
-            <button class="btn btn-one operation-btn" type="button" name="divide">/</button>
+            <button id="btn-add" class="btn btn-one operation-btn" type="button" name="add">+</button>
+            <button id="btn-subtract" class="btn btn-one operation-btn" type="button" name="subtract">-</button>
+            <button id="btn-multiply" class="btn btn-one operation-btn" type="button" name="multiply">x</button>
+            <button id="btn-divide" class="btn btn-one operation-btn" type="button" name="divide">/</button>
           </div>
           <div class="row">
             <div class="row-left">
-              <button class="btn btn-one number-btn" type="button" name="seven">7</button>
-              <button class="btn btn-one number-btn" type="button" name="eight">8</button>
-              <button class="btn btn-one number-btn" type="button" name="nine">9</button><br>
-              <button class="btn btn-one number-btn" type="button" name="divide">4</button>
-              <button class="btn btn-one number-btn" type="button" name="add">5</button>
-              <button class="btn btn-one number-btn" type="button" name="subtract">6</button><br>
-              <button class="btn btn-one number-btn" type="button" name="one">1</button>
-              <button class="btn btn-one number-btn" type="button" name="two">2</button>
-              <button class="btn btn-one number-btn" type="button" name="three">3</button>
+              <button id="btn-seven" class="btn btn-one number-btn" type="button" name="seven">7</button>
+              <button id="btn-eight" class="btn btn-one number-btn" type="button" name="eight">8</button>
+              <button id="btn-nine" class="btn btn-one number-btn" type="button" name="nine">9</button><br>
+              <button id="btn-four" class="btn btn-one number-btn" type="button" name="four">4</button>
+              <button id="btn-five" class="btn btn-one number-btn" type="button" name="five">5</button>
+              <button id="btn-six" class="btn btn-one number-btn" type="button" name="six">6</button><br>
+              <button id="btn-one" class="btn btn-one number-btn" type="button" name="one">1</button>
+              <button id="btn-two" class="btn btn-one number-btn" type="button" name="two">2</button>
+              <button id="btn-three" class="btn btn-one number-btn" type="button" name="three">3</button>
             </div>
             <div class="row-right">
               <button id="btn-enter" class="toptobottom btn btn-two" type="button" name="enter">=</button>
