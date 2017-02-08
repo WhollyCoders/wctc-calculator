@@ -3,33 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>Calculator</title>
-    <style media="screen">
-      .wrapper{width: 230px; background-color: #3e2c06; padding: 12px; border-radius: 20px;}
-      .calculator-output{border: 1px solid #ccc; background-color: #333; width: 217px; height: 55px; margin: 2px;}
-      #output-area{color: beige; text-align: right; vertical-align: bottom; font-size: 200%; overflow: hidden; padding-right: 5px; padding-top: 10px;}
-      .row-left{float: left;}
-      #btn-enter{margin-left: 6px; background-color: #d2d3d7; word-wrap: break-word;}
-      #btn-clear{margin-left: 4px; background-color: beige; text-align: center; padding: 0px; font-size: 150%;}
-      #btn-zero{margin-right:3px;}
-      .btn{font-size: 200%;}
-      .btn-one{width: 50px; height: 50px; margin: 2px;}
-      .btn-two{width: 50px; height: 158px; margin: 2px;}
-      .btn-three{width: 167px; height: 50px; margin: 2px;}
-
-      .operation-btn{background-color: #ea9038; color: #fff;}
-      .number-btn{background-color: #67686a; color: #fff; }
-    </style>
+    <link rel="stylesheet" href="./css/styles.css">
   </head>
   <body>
     <div class="container">
       <div class="wrapper">
         <div class="calculator">
           <div class="row">
-            <div id="output-area" class="calculator-output">
-
-            </div>
+            <div id="output-area" class="calculator-output">0</div>
           </div>
-          <div class="row">
+          <div id="operation-btns" class="row">
             <button id="btn-add" class="btn btn-one operation-btn" type="button" name="add">+</button>
             <button id="btn-subtract" class="btn btn-one operation-btn" type="button" name="subtract">-</button>
             <button id="btn-multiply" class="btn btn-one operation-btn" type="button" name="multiply">x</button>
@@ -45,7 +28,7 @@
               <button id="btn-six" class="btn btn-one number-btn" type="button" name="six">6</button><br>
               <button id="btn-one" class="btn btn-one number-btn" type="button" name="one">1</button>
               <button id="btn-two" class="btn btn-one number-btn" type="button" name="two">2</button>
-              <button id="btn-three" class="btn btn-one number-btn" type="button" name="three">3</button>
+              <button id="btn-three" class="btn btn-one number-btn" type="button" name="three">.</button>
             </div>
             <div class="row-right">
               <button id="btn-enter" class="toptobottom btn btn-two" type="button" name="enter">=</button>
@@ -62,48 +45,6 @@
         </div>
       </div>
     </div>
-    <script type="text/javascript">
-      function addToOutputArea(event){
-          console.log(event);
-          if(outputArea.innerHTML == 0){
-            var btnValue = event.target.innerHTML;
-            outputArea.innerHTML = btnValue;
-            console.log(btnValue);
-            console.log('I was clicked with zero value!!!');
-          }else{
-            var btnValue = event.target.innerHTML;
-            outputArea.innerHTML += btnValue;
-            console.log(btnValue);
-            console.log('I was clicked!!!');
-          }
-      }
-      var outputArea = document.getElementById('output-area');
-      // SEVEN
-      document.getElementById('btn-seven').addEventListener('click', addToOutputArea);
-      // EIGHT
-      document.getElementById('btn-eight').addEventListener('click', addToOutputArea);
-      // NINE
-      document.getElementById('btn-nine').addEventListener('click', addToOutputArea);
-      // FOUR
-      document.getElementById('btn-four').addEventListener('click', addToOutputArea);
-      // FIVE
-      document.getElementById('btn-five').addEventListener('click', addToOutputArea);
-      // SIX
-      document.getElementById('btn-six').addEventListener('click', addToOutputArea);
-      // ONE
-      document.getElementById('btn-one').addEventListener('click', addToOutputArea);
-      // TWO
-      document.getElementById('btn-two').addEventListener('click', addToOutputArea);
-      // THREE
-      document.getElementById('btn-three').addEventListener('click', addToOutputArea);
-      // ZERO
-      document.getElementById('btn-zero').addEventListener('click', addToOutputArea);
-
-
-      document.getElementById('btn-clear').addEventListener('click', function(event){
-        outputArea.innerHTML = 0;
-      });
-
-    </script>
+    <script src="./js/script.js" type="text/javascript"></script>
   </body>
 </html>
