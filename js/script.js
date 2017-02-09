@@ -1,3 +1,7 @@
+var addCounter = 0;
+var firstValue = 0;
+var secondValue = 0;
+var result = 0;
 function addToOutputArea(event){
 
     console.log(event);
@@ -17,9 +21,35 @@ function addToOutputArea(event){
     }
 
 }
+
+function additionOperation(){
+    if(addCounter == 0){
+      firstValue = parseInt(outputArea.innerHTML);
+      outputArea.innerHTML = '';
+      console.log('firstValue: '+firstValue);
+    }
+}
+
+function evaluateExpression(){
+    var secondValue = parseInt(outputArea.innerHTML);
+    console.log(firstValue);
+    console.log(secondValue);
+    outputArea.innerHTML = '';
+    firstValue = parseInt(firstValue);
+    secondValue = parseInt(secondValue);
+    result = addValues(firstValue, secondValue);
+    console.log(result);
+}
+
+function addValues(firstValue, secondValue){
+    result = firstValue + secondValue;
+    outputArea.innerHTML = result;
+}
+
+
 var outputArea = document.getElementById('output-area');
 // OPERATION BUTTONS
-document.getElementById('btn-add').addEventListener('click', addToOutputArea);
+document.getElementById('btn-add').addEventListener('click', additionOperation);
 //When the ADD button is clicked, 1) the contents of the OUTPUT AREA will
 //be saved into a variable (FIRST VALUE) 2) The OUTPUT AREA will be cleared of its contents
 // 3) All OPERATION BUTTONS will be disabled, 4) OUTPUT AREA will be 'listening'
@@ -52,6 +82,7 @@ document.getElementById('btn-three').addEventListener('click', addToOutputArea);
 document.getElementById('btn-zero').addEventListener('click', addToOutputArea);
 
 
+document.getElementById('btn-enter').addEventListener('click', evaluateExpression);
 document.getElementById('btn-clear').addEventListener('click', function(event){
   outputArea.innerHTML = 0;
 });
